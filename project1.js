@@ -42,7 +42,7 @@ class Check1 extends Player {
     }
     loser() {
         if (this.pieces.length === 0) {
-            this.lose = false
+            this.lose = true
         }
     }
 }
@@ -197,10 +197,7 @@ function jumpCleanup () {
         if (piecesBlue[i].promoted === true){
             document.querySelector(`#p${piecesBlue[i].id}`).classList.add("promoted")
         } 
-    }
-
-    
-   
+    }   
 }
 
 function resetGamestate() {
@@ -292,7 +289,6 @@ function removePieceFromBoard(threatenedPiece) {
         }
     })
 }
-
 
 function gameStart() {
 
@@ -460,8 +456,8 @@ function moveFinder(selectedPiece) {
             divLocation.classList.add("capture-indicator")
             divLocation.setAttribute('onclick', `jump("${divId}");`) 
             targetSq.push(divId)
-            }
-        })
+        }
+    })
     
     movingPiece = selectedPiece
         
@@ -502,7 +498,6 @@ function jump (option) {
             y: parseInt(option[4])
         }}
         
-    
         if (threatenedPiece.position.y > tempPiece.position.y) {
             threatenedPiece.position.y = threatenedPiece.position.y-1
         } else {
