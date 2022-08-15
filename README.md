@@ -14,7 +14,7 @@ Welcome to "Normal Checkers"
     CSS
 
 3. Getting Started
-    (link to the game)
+    (https://badmeme.github.io/Corey-Neal-iceCodeTrucker-Project---Checkers/)
 
     We all know how to play normal checkers.
 
